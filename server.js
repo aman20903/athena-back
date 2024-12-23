@@ -26,6 +26,11 @@ app.get('/api/candidates', (req, res) => {
   res.json(candidates);
 });
 
+// For local development
+
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
-});
+   });
+
+// This is crucial for Vercel
+module.exports = app;
